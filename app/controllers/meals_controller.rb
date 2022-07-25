@@ -1,4 +1,5 @@
 class MealsController < ApplicationController
+
   def new
     @restaurant = Restaurant.find(params[:restaurant_id])
     @meal = Meal.new
@@ -29,7 +30,7 @@ class MealsController < ApplicationController
   def destroy
     @meal = Meal.find(params[:id])
     if @meal.destroy
-      redirect_to restaurant_path(@meal.restaurant),  status: :see_other
+      redirect_to restaurant_path(@meal.restaurant), status: :see_other
     else
       render :destroy, status: :unprocessable_entity
     end
