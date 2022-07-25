@@ -1,0 +1,13 @@
+<h1>Découvrez nos restaurants</h1>
+
+<div class="cards">
+  <% @restaurants.each do |restaurant|%>
+    <%= link_to restaurant_path(restaurant) do %>
+      <div class="card-category"
+        style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path restaurant.photo.key, height: 300, crop: :fill %>')">
+        <h2><%= restaurant.name %> </h2>
+      </div>
+    <% end  %>
+  <% end  %>
+</div>
+<%= link_to "ajouter un restaurant", new_restaurant_path, class: "btn btn-primary mt-2" %>

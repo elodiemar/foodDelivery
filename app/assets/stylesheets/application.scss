@@ -9,4 +9,11 @@
 
 // Your CSS partials
 @import "components/index";
+@import "components/card";
+@import "components/banner";
 @import "pages/index";
+
+
+a{
+  text-decoration: none;
+}

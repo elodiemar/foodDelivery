@@ -1,5 +1,6 @@
 class MealsController < ApplicationController
   def new
+    @restaurant = Restaurant.find(params[:restaurant_id])
     @meal = Meal.new
   end
 
@@ -37,6 +38,6 @@ class MealsController < ApplicationController
   private
 
   def meal_params
-    params.require(:meal).permit(:name, :price)
+    params.require(:meal).permit(:name, :price, :photo, :restaurant_id)
   end
 end
