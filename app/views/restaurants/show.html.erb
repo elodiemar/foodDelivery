@@ -5,3 +5,18 @@
 <%= @restaurant.address %>
 
 <h2> Menu </h2>
+
+
+
+<%= @meals.each do |meal| %>
+<div class="card-product"
+        style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path meal.restaurant.photo.key %>')">
+    </div>
+  <div class="card-product-infos">
+    <h2>Product name</h2>
+    <p>Product description with <strong>relevant info</strong> only.</p>
+  </div>
+</div>
+
+
+<%= link_to "ajouter un plat", new_restaurant_meal_path(@restaurant), class: "btn btn-primary mt-2" %>
