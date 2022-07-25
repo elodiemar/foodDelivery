@@ -1,21 +1,18 @@
 .banner {
+  background-image:
+  linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 93, 0.3)),
+  asset-url("banner.jpg");
   background-size: cover;
   background-position: center;
+  height: 380px;
+  color: white;
+  text-align: center;
   padding: 150px 0;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  margin-bottom: 40px;
 }
 
 .banner h1 {
-  margin: 0;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
-  text-align: center;
-}
-
-.banner p {
-  font-size: 20px;
-  color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
